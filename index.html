@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Rider — Kids party DJ in Birmingham</title>
+<meta name="description" content="11-year-old kids party DJ in Birmingham. Chart hits, dance music and party favourites for birthdays, events and celebrations. Professional setup, PAT certified, fully insured, parent managed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fdf6e3;
+    --ink: #1a1a1a;
+    --pink: #ff2e88;
+    --blue: #2d6cff;
+    --yellow: #ffd93d;
+    --muted: #6b6357;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px;
+    overflow-x: hidden;
+    background-image: radial-gradient(rgba(0,0,0,0.035) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+
+  a { color: var(--pink); }
+  a:hover { background: var(--yellow); }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px 0 60px;
+    position: relative;
+  }
+
+  .marker {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    line-height: 1.05;
+  }
+
+  .highlight {
+    background: linear-gradient(transparent 55%, var(--yellow) 55%);
+    padding: 0 4px;
+  }
+
+  .pinkhl {
+    background: linear-gradient(transparent 55%, #ffb8d6 55%);
+    padding: 0 4px;
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 18px;
+    border-bottom: 2px dashed var(--ink);
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    transform: rotate(-2deg);
+    display: inline-block;
+    text-decoration: none;
+    color: var(--ink);
+    position: relative;
+  }
+
+  .logo:hover { background: none; }
+
+  .logo span {
+    color: var(--pink);
+  }
+
+  .logo::after {
+    content: "";
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: 2px;
+    height: 6px;
+    background: var(--yellow);
+    z-index: -1;
+    transform: rotate(-1.5deg);
+  }
+
+  .top nav {
+    display: flex;
+    gap: 18px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+  }
+
+  .top nav a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .top nav a:hover {
+    background: none;
+    border-bottom-color: var(--pink);
+  }
+
+  .top .msg {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 8px 14px;
+    text-decoration: none;
+    transform: rotate(1.5deg);
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--pink);
+  }
+
+  .top .msg:hover {
+    background: var(--ink);
+    color: var(--yellow);
+    transform: rotate(1.5deg) translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--pink);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 44px;
+    align-items: center;
+    padding: 54px 0 60px;
+    position: relative;
+  }
+
+  .hero .kicker {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: inline-block;
+    margin-bottom: 14px;
+    transform: rotate(-1deg);
+  }
+
+  .hero h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    font-size: clamp(2.6rem, 6vw, 3.9rem);
+    line-height: 1.05;
+    margin-bottom: 22px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(transparent 60%, var(--yellow) 60%);
+    padding: 0 4px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 46ch;
+    margin-bottom: 26px;
+    color: #2a2a2a;
+  }
+
+  .cta {
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.15rem;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 12px 22px;
+    text-decoration: none;
+    transform: rotate(-1deg);
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--pink);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+
+  .cta:hover {
+    color: var(--yellow);
+    background: var(--ink);
+    transform: rotate(-1deg) translate(2px, 2px);
+    box-shadow: 3px 3px 0 var(--pink);
+  }
+
+  .photo {
+    background: #fff;
+    padding: 14px 14px 46px;
+    box-shadow: 7px 7px 0 rgba(0,0,0,0.15);
+    transform: rotate(3deg);
+    border: 1px solid #e2d9c4;
+    position: relative;
+    max-width: 320px;
+    margin-left: auto;
+  }
+
+  .photo::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 84px;
+    height: 24px;
+    background: rgba(255, 217, 61, 0.85);
+    border-left: 1px dashed rgba(0,0,0,0.15);
+    border-right: 1px dashed rgba(0,0,0,0.15);
+  }
+
+  .photo .frame {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,46,136,0.15), transparent 60%),
+      radial-gradient(circle at 75% 75%, rgba(45,108,255,0.15), transparent 60%),
+      #efe6cf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    border: 1px solid #e2d9c4;
+    color: #7d7361;
+  }
+
+  .photo .cap {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+  }
+
+  .strip {
+    border-top: 2px dashed var(--ink);
+    border-bottom: 2px dashed var(--ink);
+    padding: 14px 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--ink);
+    margin: 30px 0 10px;
+    transform: rotate(-0.4deg);
+  }
+
+  .strip span {
+    color: var(--pink);
+    padding: 0 8px;
+  }
+
+  .about {
+    padding: 50px 0 20px;
+  }
+
+  .about h2, .sec h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+
+  .about h2::after, .sec h2::after {
+    content: "";
+    display: block;
+    height: 6px;
+    width: 60%;
+    background: var(--yellow);
+    margin-top: 2px;
+    transform: rotate(-1deg);
+  }
+
+  .about .lede {
+    font-size: 1.02rem;
+    color: var(--muted);
+    margin: 14px 0 30px;
+    max-width: 58ch;
+  }
+
+  .about p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    max-width: 62ch;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 28px 0 4px;
+  }
+
+  .fact {
+    background: #fff;
+    border: 2px solid var(--ink);
+    padding: 10px 16px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    transform: rotate(-1deg);
+    box-shadow: 3px 3px 0 var(--blue);
+  }
+
+  .fact:nth-child(2) { transform: rotate(1deg); box-shadow: 3px 3px 0 var(--pink); }
+  .fact:nth-child(3) { transform: rotate(-0.6deg); box-shadow: 3px 3px 0 var(--yellow); }
+  .fact:nth-child(4) { transform: rotate(0.8deg); box-shadow: 3px 3px 0 var(--blue); }
+
+  .sec {
+    padding: 54px 0 30px;
+  }
+
+  .sec .intro {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 58ch;
+    margin: 12px 0 30px;
+  }
+
+  .parties {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .party {
+    background: #fff;
+    padding: 24px 20px 22px;
+    border: 2px solid var(--ink);
+    transform: rotate(-0.8deg);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .party:nth-child(2) {
+    transform: rotate(0.8deg);
+    box-shadow: 5px 5px 0 var(--pink);
+  }
+
+  .party:nth-child(3) {
+    transform: rotate(-0.3deg);
+    box-shadow: 5px 5px 0 var(--blue);
+  }
+
+  .party .icon {
+    font-size: 1.9rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .party h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .party p {
+    font-size: 0.9rem;
+    color: #383838;
+  }
+
+  .included {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 26px;
+    list-style: none;
+    background: #fff;
+    border: 2px solid var(--ink);
+    padding: 26px 28px;
+    box-shadow: 6px 6px 0 var(--yellow);
+    transform: rotate(0.4deg);
+  }
+
+  .included li {
+    font-size: 0.95rem;
+    padding: 6px 0 6px 26px;
+    position: relative;
+  }
+
+  .included li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--pink);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .contact-form-wrap {
+    background: #fff;
+    border: 2px solid var(--ink);
+    padding: 32px 30px;
+    box-shadow: 7px 7px 0 var(--pink);
+    transform: rotate(-0.4deg);
+    margin-top: 10px;
+  }
+
+  .contact-form-wrap .form-note {
+    font-size: 0.86rem;
+    color: var(--muted);
+    margin-bottom: 22px;
+    max-width: 54ch;
+  }
+
+  .contact-form-wrap .form-note strong {
+    color: var(--ink);
+  }
+
+  .field {
+    margin-bottom: 18px;
+  }
+
+  .field label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .field label .req {
+    color: var(--pink);
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 0.95rem;
+    padding: 11px 12px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    outline: none;
+    transition: box-shadow 0.15s ease;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    box-shadow: 3px 3px 0 var(--yellow);
+  }
+
+  .field textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .form-submit {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.1rem;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 12px 26px;
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--pink);
+    cursor: pointer;
+    transform: rotate(-0.8deg);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    margin-top: 6px;
+  }
+
+  .form-submit:hover {
+    transform: rotate(-0.8deg) translate(2px, 2px);
+    box-shadow: 3px 3px 0 var(--pink);
+    color: var(--yellow);
+  }
+
+  .contact {
+    padding: 54px 0 20px;
+  }
+
+  .contact-card {
+    background: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 40px 34px;
+    box-shadow: 8px 8px 0 var(--pink);
+    transform: rotate(-0.5deg);
+    position: relative;
+  }
+
+  .contact-card::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 30px;
+    width: 100px;
+    height: 26px;
+    background: rgba(255, 217, 61, 0.9);
+    transform: rotate(-4deg);
+    border-left: 1px dashed rgba(0,0,0,0.2);
+    border-right: 1px dashed rgba(0,0,0,0.2);
+  }
+
+  .contact-card h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+    line-height: 1.1;
+    color: var(--paper);
+    margin-bottom: 14px;
+  }
+
+  .contact-card h2 em {
+    font-style: normal;
+    color: var(--yellow);
+  }
+
+  .contact-card p {
+    font-size: 0.98rem;
+    max-width: 52ch;
+    color: rgba(253,246,227,0.88);
+    margin-bottom: 24px;
+  }
+
+  .contact-card .note {
+    margin-top: 22px;
+    font-size: 0.8rem;
+    color: rgba(253,246,227,0.55);
+    max-width: 46ch;
+  }
+
+  .foot {
+    margin-top: 50px;
+    padding-top: 22px;
+    border-top: 2px dashed var(--ink);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .foot a { color: var(--muted); }
+
+  @media (max-width: 780px) {
+    .hero { grid-template-columns: 1fr; gap: 36px; padding: 40px 0; }
+    .photo { margin: 0 auto; transform: rotate(2deg); }
+    .parties { grid-template-columns: 1fr; }
+    .included { grid-template-columns: 1fr; }
+    .contact-card { padding: 32px 22px; }
+    .contact-form-wrap { padding: 26px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 0 14px; font-size: 15px; }
+    .logo { font-size: 1.65rem; }
+    .top nav { font-size: 0.72rem; gap: 12px; }
+    .hero h1 { font-size: 2.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="top">
+    <a href="#top" class="logo">DJ <span>Rider</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#parties">Parties</a>
+      <a href="#included">What's included</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="msg" href="#contact">Message us</a>
+  </header>
+
+  <section class="hero" id="top">
+    <div>
+      <span class="kicker">Kids party DJ — Birmingham</span>
+      <h1>Chart hits, dance<br>music &amp; a <em>proper</em><br>good party.</h1>
+      <p>
+        I'm an 11-year-old kids party DJ based in Birmingham. I play chart hits, dance music and party favourites — perfect for birthdays, events and celebrations.
+      </p>
+      <a class="cta" href="#contact">Book me →</a>
+    </div>
+    <div class="photo">
+      <div class="frame">🎧</div>
+      <div class="cap">Rider — age 11</div>
+    </div>
+  </section>
+
+  <div class="strip">
+    Birthdays <span>·</span> Events <span>·</span> Celebrations <span>·</span> Birthdays <span>·</span> Events <span>·</span> Celebrations
+  </div>
+
+  <section class="about" id="about">
+    <h2>A bit about me</h2>
+    <p class="lede">Everything on this page comes straight from my Facebook page — no made-up stuff.</p>
+    <p>
+      I'm 11 and I've been DJing for a while now. I play <span class="highlight">chart hits, dance music and party favourites</span>, and I'm perfect for birthdays, events and celebrations.
+    </p>
+    <p>
+      Every booking comes with a <span class="pinkhl">professional DJ setup</span>. All my equipment is <span class="pinkhl">PAT certified</span>, I'm <span class="pinkhl">fully insured</span>, and I'm <span class="pinkhl">parent managed</span> — my mum or dad comes along to keep an eye on things.
+    </p>
+
+    <div class="facts">
+      <span class="fact">Age 11</span>
+      <span class="fact">PAT certified kit</span>
+      <span class="fact">Fully insured</span>
+      <span class="fact">Parent managed</span>
+    </div>
+  </section>
+
+  <section class="sec" id="parties">
+    <h2>What I do</h2>
+    <p class="intro">Perfect for birthdays, events and celebrations.</p>
+
+    <div class="parties">
+      <div class="party">
+        <span class="icon">🎂</span>
+        <h3>Birthdays</h3>
+        <p>Kids' birthdays of all ages. I'll bring the tunes, the lights and the energy.</p>
+      </div>
+      <div class="party">
+        <span class="icon">🎉</span>
+        <h3>Events</h3>
+        <p>School discos, fun days and community events. Clean versions available on request.</p>
+      </div>
+      <div class="party">
+        <span class="icon">🏡</span>
+        <h3>Celebrations</h3>
+        <p>Family get-togethers and parties — a proper mixed bag of music for all ages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="included">
+    <h2>What's included</h2>
+    <p class="intro">Everything below is confirmed on the official DJ Rider Facebook page.</p>
+    <ul class="included">
+      <li>Professional DJ setup</li>
+      <li>PAT certified equipment</li>
+      <li>Fully insured</li>
+      <li>Parent managed</li>
+      <li>Chart hits, dance music &amp; party favourites</li>
+      <li>Birthdays, events &amp; celebrations</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-card">
+      <h2>Fancy booking me? <em>Dead easy.</em></h2>
+      <p>
+        Fill in the form below or drop us a message on Facebook. You'll get a reply with availability and a straightforward price — no hidden extras, no pushy sales.
+      </p>
+
+      <div class="contact-form-wrap">
+        <p class="form-note">
+          Fields marked with <span class="req" style="color:var(--pink); font-weight:700;">*</span> are required. Phone number is optional.
+        </p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          
+          <input type="hidden" name="access_key" value="18c56381-f0bb-4ade-91e4-16cc67cf5cd5">
+          
+          <input type="hidden" name="subject" value="New DJ Rider Booking Enquiry">
+          
+          <!-- This line tells Web3Forms to send the user back to your site instead of showing the default page -->
+          <input type="hidden" name="redirect" value="https://websys.djrider.cyou/#contact">
+          
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span style="font-weight:400; text-transform:none; letter-spacing:0; color:var(--muted);">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 07700 900000">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" required placeholder="Tell us about your party — date, location, what you have in mind..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send message →</button>
+        </form>
+      </div>
+
+      <p class="note" style="margin-top:22px;">Prefer Facebook? You can still message us there — it's the quickest way. Replies might come after school hours.</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>© <span id="yr"></span> DJ Rider · Birmingham</span>
+    <span><a href="https://www.facebook.com/profile.php?id=61572522521595" target="_blank" rel="noopener">Facebook</a> · <a href="#top">Back to top</a></span>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
